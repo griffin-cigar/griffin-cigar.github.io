@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+  
+
+  
+
+  <title>Griffin Cigar</title>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" href="/assets/css/main.css">
+
+  <script type="text/javascript" src="/assets/javascripts/jquery-3.3.1.min.js"></script>
+  <script type="text/javascript" src="/assets/javascripts/bootstrap.min.js"></script>
+</head>
+
+
+  <body>
+    <div class="header">
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-1" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a href="http://localhost:4000" class="navbar-brand">
+          <img src="http://localhost:4000/assets/images/logo.png" alt="Brand Logo">
+        </a>
+      </div>
+
+      <div id="navbar-collapse-1" class="collapse navbar-collapse navbar-responsive-collapse">
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="http://localhost:4000">Welcome</a></li>
+          <li><a href="http://localhost:4000/cigars">Cigars</a></li>
+          <li><a href="http://localhost:4000/accessories">Accessories</a></li>
+          <li><a href="http://localhost:4000/events">Event Calendar</a></li>
+          <li><a href="http://localhost:4000/drinks">Drinks</a></li>
+          <li><a href="http://localhost:4000/contact">Contact Us</a></li>
+        </ul> <!-- /.nav.navbar-nav -->
+      </div> <!-- /.navbar-collapse -->
+    </div> <!-- /.container-fluid -->
+  </nav>
+</div>
+
+
+    <div class="container-fluid main-container">
+      <div class="hero hero-image-lounge">
+  <h1>CONTACT US</h1>
+  <p class="caption">Take time to enjoy where you are.</p>
+</div>
+
+
+      <div class="row main-body-container">
+  <div class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2">
+    <div class="row">
+      <div class="col-xs-6 col-sm-4 col-sm-offset-2">
+        <h2>Hours</h2>
+        <p class="main-body small">Mon-Sat: 10am-9pm</p>
+        <p class="main-body small">Sunday: 12pm-6pm</p>
+      </div>
+
+      <div class="col-xs-6 col-sm-4">
+        <h2>Contact Us</h2>
+        <p class="main-body small">9200 Stony Point Pkwy Ste 120<br>Richmond, VA 23225<br><a href="tel:+18043816320">(804) 381-6320</a></p>
+        <button id="email-us" type="button" onclick="showForm()" class="btn btn-lg btn-default">Email Us</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="row main-body-container">
+  <div class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-4 col-md-offset-4">
+    <div id="thank-you">
+      <p>Thank you for contacting us! We'll get back to you as soon as we can.</p>
+    </div>
+
+    <form id="contact-form" action="https://formspree.io/joeywbrooks@gmail.com" method="POST">
+      <input type="hidden" name="_subject" value="Message from the website">
+      <input type="text" name="_gotcha" style="display:none">
+      <input type="hidden" name="_next" value="/contact?q=1" />
+
+      <label for="contact-name">Name</label><br>
+      <input id="contact-name" type="text" name="name"><br><br>
+
+      <label for="contact-email">Email</label><br>
+      <input id="contact-email" type="email" name="_replyto"><br><br>
+
+      <label for="contact-message">Message</label><br>
+      <textarea id="contact-message" type="email" name="message"></textarea><br><br>
+
+      <input id="contact-submit" type="submit" class="btn btn-lg btn-default" value="Send" onclick="hideForm()">
+    </form>
+  </div>
+</div>
+
+<div class="row main-body-container">
+  <div class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2">
+    <!-- <iframe frameborder="0" style="border:0" src="    https://www.google.com/maps/embed/v1/view?key=AIzaSyA7VsUGm8vEh8_AUxex47PCK9BDxo3ri1Q&center=37.549033,-77.570859&zoom=15" allowfullscreen></iframe> -->
+    <!-- <iframe frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q=Griffin%20Cigar%2C%209201%20Stony%20Point%20Pkwy%2C%20Suite%20120%2C%20Richmond%2C%20VA%2023235&key=AIzaSyA7VsUGm8vEh8_AUxex47PCK9BDxo3ri1Q" allowfullscreen></iframe> -->
+    <div id="map"></div>
+
+    <script type="text/javascript">
+      function showForm() {
+        $('#email-us').css('display', 'none');
+        $('#contact-form').css('display', 'block');
+      };
+
+      function hideForm() {
+        $('#email-us').css('display', 'block');
+        $('#contact-form').css('display', 'none');
+
+        $('#thank-you').css('display', 'block').delay(5000).css('display', 'none');
+      };
+    </script>
+
+
+    <script>
+      function initMap() {
+        var uluru = {lat: 37.549033, lng: -77.570859};
+
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 15,
+          center: uluru,
+          disableDefaultUI: true,
+          styles: [
+            {
+              "stylers": [ { "weight": 1 } ]
+            },
+            {
+              "elementType": "geometry",
+              "stylers": [ { "color": "#f5f5f5" } ]
+            },
+            {
+              "elementType": "labels.icon",
+              "stylers": [ { "visibility": "off" } ]
+            },
+            {
+              "elementType": "labels.text.fill",
+              "stylers": [ { "color": "#616161" } ]
+            },
+            {
+              "elementType": "labels.text.stroke",
+              "stylers": [ { "color": "#f5f5f5" } ]
+            },
+            {
+              "featureType": "administrative.land_parcel",
+              "elementType": "labels.text.fill",
+              "stylers": [ { "color": "#bdbdbd" } ]
+            },
+            {
+              "featureType": "poi",
+              "stylers": [ { "visibility": "on" } ]
+            },
+            {
+              "featureType": "poi",
+              "elementType": "geometry",
+              "stylers": [ { "color": "#eeeeee" } ]
+            },
+            {
+              "featureType": "poi",
+              "elementType": "labels.text.fill",
+              "stylers": [ { "color": "#757575" } ]
+            },
+            {
+              "featureType": "poi.attraction",
+              "stylers": [ { "weight": 1 } ]
+            },
+            {
+              "featureType": "poi.business",
+              "stylers": [ { "visibility": "on" }, { "weight": 1 } ]
+            },
+            {
+              "featureType": "poi.government",
+              "stylers": [ { "visibility": "on" } ]
+            },
+            {
+              "featureType": "poi.medical",
+              "stylers": [ { "visibility": "on" } ]
+            },
+            {
+              "featureType": "poi.park",
+              "elementType": "geometry",
+              "stylers": [ { "color": "#e5e5e5" } ]
+            },
+            {
+              "featureType": "poi.park",
+              "elementType": "labels.text.fill",
+              "stylers": [ { "color": "#9e9e9e" } ]
+            },
+            {
+              "featureType": "poi.place_of_worship",
+              "stylers": [ { "visibility": "on" } ]
+            },
+            {
+              "featureType": "poi.school",
+              "stylers": [ { "visibility": "on" } ]
+            },
+            {
+              "featureType": "poi.sports_complex",
+              "stylers": [ { "visibility": "on" } ]
+            },
+            {
+              "featureType": "road",
+              "elementType": "geometry",
+              "stylers": [ { "color": "#ffffff" } ]
+            },
+            {
+              "featureType": "road.arterial",
+              "elementType": "labels.text.fill",
+              "stylers": [ { "color": "#757575" } ]
+            },
+            {
+              "featureType": "road.highway",
+              "elementType": "geometry",
+              "stylers": [ { "color": "#dadada" } ]
+            },
+            {
+              "featureType": "road.highway",
+              "elementType": "labels.text.fill",
+              "stylers": [ { "color": "#616161" } ]
+            },
+            {
+              "featureType": "road.local",
+              "elementType": "labels.text.fill",
+              "stylers": [ { "color": "#9e9e9e" } ]
+            },
+            {
+              "featureType": "transit.line",
+              "elementType": "geometry",
+              "stylers": [ { "color": "#e5e5e5" } ]
+            },
+            {
+              "featureType": "transit.station",
+              "elementType": "geometry",
+              "stylers": [ { "color": "#eeeeee" } ]
+            },
+            {
+              "featureType": "water",
+              "elementType": "geometry",
+              "stylers": [ { "color": "#c9c9c9" } ]
+            },
+            {
+              "featureType": "water",
+              "elementType": "labels.text.fill",
+              "stylers": [ { "color": "#9e9e9e" } ]
+            }
+          ]
+        });
+
+        var marker = new google.maps.Marker({
+          position: uluru,
+          map: map
+        });
+      }
+    </script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAIxsBupP5QF3rcvPeq2Y2uCtAIuk-MZZc&callback=initMap">
+    </script>
+  </div>
+</div>
+
+
+      <div class="footer clearfix">
+  <p class="pull-right">9200 Stony Point Pkwy, Suite 120, Richmond, VA 23225 &middot; <a href="tel:+18043816320">(804) 381-6320</a></p>
+</div>
+
+    </div>
+  </body>
+</html>
