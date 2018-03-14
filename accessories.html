@@ -6,16 +6,20 @@ layout: default
 permalink: /accessories
 ---
 
-<div class="row main-body-container no-margin-bottom">
-  <div class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2">
-    <p class="main-body">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam fermentum porta justo, at commodo mauris tincidunt eu. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nam pretium sem non facilisis tincidunt.<br><br></p>
-  </div>
-</div>
-
 <div class="row main-body-container">
-  <div class="col-xs-9 col-sm-9 col-md-8 col-md-offset-1">
+  <div class="add-margin-top hidden-xs col-sm-2 col-sm-offset-2">
     <div class="row row-eq-height align-item-center">
-    {% assign image_files = site.static_files | where: "accessoryImage", true %}
+      <img src="{{ "/assets/images/Christys logo.JPG" | absolute_url }}" class="img-responsive">
+    </div>
+
+    <div class="row row-eq-height align-item-center">
+      <img src="{{ "/assets/images/christys-1.jpg" | absolute_url }}" class="img-responsive">
+    </div>
+  </div>
+
+  <div class="col-xs-12 col-sm-6">
+    <div class="row row-eq-height align-item-center">
+    {% assign image_files = site.static_files | where: "hatsImage", true %}
     {% for myimage in image_files %}
       {% assign loopindex = forloop.index | modulo: 3 %}
       <div class="col-xs-4">
@@ -24,18 +28,25 @@ permalink: /accessories
       {% if loopindex == 0 %}
     </div><div class="row row-eq-height align-item-center">
       {% endif %}
-
     {% endfor %}
     </div>
   </div>
+</div>
 
-  <div class="col-xs-3 col-sm-3 col-md-2">
+<div class="row main-body-container">
+  <div class="col-xs-12 col-md-8 col-md-offset-2">
     <div class="row row-eq-height align-item-center">
-      <img src="{{ "/assets/images/Christys logo.JPG" | absolute_url }}" class="img-responsive">
-    </div>
+    {% assign image_files = site.static_files | where: "accessoryImage", true %}
+    {% for myimage in image_files %}
+      {% assign loopindex = forloop.index | modulo: 4 %}
+      <div class="col-xs-3 text-center">
+        <img src="{{ myimage.path | absolute_url }}" class="margin-auto img-responsive">
+      </div>
+      {% if loopindex == 0 %}
+    </div><div class="row row-eq-height align-item-center">
+      {% endif %}
 
-    <div class="row row-eq-height align-item-center">
-      <img src="{{ "/assets/images/christys-1.jpg" | absolute_url }}" class="img-responsive">
+    {% endfor %}
     </div>
   </div>
 </div>

@@ -1,13 +1,39 @@
 @media only screen and (max-width : 480px) {
-  .navbar.navbar-default {
-    min-height: inherit;
+  body {
+    font-size: 0.9em;
 
-    .navbar-brand {
-      img {
-        height:   50px;
-        position: absolute;
-        left:     5%;
-        top:      -5px;
+    .navbar.navbar-default {
+      min-height: inherit;
+
+      .navbar-brand {
+        img {
+          height:   50px;
+          position: absolute;
+          left:     5%;
+          top:      -5px;
+        }
+      }
+    }
+
+    .hero {
+      h1 {
+        font-size:   50px;
+        padding-top: 65px;
+      }
+
+      .caption {
+        font-size:      16px;
+        padding-bottom: 80px;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width : 768px) {
+  body {
+    .navbar.navbar-default {
+      .navbar-right {
+        padding-right: 0;
       }
     }
   }

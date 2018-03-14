@@ -40,6 +40,10 @@ defaults:
       path: "assets/images/accessories"
     values:
       accessoryImage: true
+  - scope:
+      path: "assets/images/hats"
+    values:
+      hatsImage: true
 
 
 
