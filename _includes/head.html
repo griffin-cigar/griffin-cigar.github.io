@@ -1,0 +1,19 @@
+<head>
+  {% if page.title %}
+    {% assign site_title = site.title | append: " " | append: site.title_separator | append: " " | append: page.title %}
+  {% endif %}
+
+  {% if site_title %}
+    {% assign site_title = site_title | markdownify | strip_html | strip_newlines | escape_once %}
+  {% endif %}
+
+  <title>{{ site_title | default: site.title }}</title>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/main.css">
+
+  <script type="text/javascript" src="{{ site.baseurl }}/assets/javascripts/jquery-3.3.1.min.js"></script>
+  <script type="text/javascript" src="{{ site.baseurl }}/assets/javascripts/bootstrap.min.js"></script>
+</head>

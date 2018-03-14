@@ -1,0 +1,14 @@
+@media only screen and (max-width : 480px) {
+  .navbar.navbar-default {
+    min-height: inherit;
+
+    .navbar-brand {
+      img {
+        height:   50px;
+        position: absolute;
+        left:     5%;
+        top:      -5px;
+      }
+    }
+  }
+}

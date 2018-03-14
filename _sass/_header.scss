@@ -1,0 +1,38 @@
+.navbar.navbar-default {
+  background-color: #FFF;
+  border:           0;
+  margin:           {
+    bottom: 10px;
+    top:    10px;
+  }
+  min-height:       120px;
+  // padding:          {
+  //   left:  90px;
+  //   right: 90px;
+  // }
+
+  .container-fluid {
+    width: 100%;
+  }
+
+  .navbar-brand {
+    display: inline-block;
+    margin:  0 5% 0 15%;
+
+    img {
+      display:    inline-block;
+      height:     auto;
+      max-height: 100px;
+      padding:    0;
+      position:   relative;
+      top:        -10px;
+    }
+  }
+
+  .navbar-right, .navbar-left {
+    font-size:  18px;
+    margin-top: 2em;
+    // margin-right: 4em;
+    text-transform: uppercase;
+  }
+}

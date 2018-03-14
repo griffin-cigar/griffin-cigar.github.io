@@ -1,0 +1,42 @@
+.main-body-container {
+  font-size:  1.8em;
+  margin:     {
+    bottom: 2em;
+    right:  0;
+    left:   15px;
+    top:    2em;
+  }
+  text-align: center;
+
+  &.no-margin-top {
+    margin-top: 0;
+  }
+
+  &.no-margin-bottom {
+    margin-bottom: 0;
+  }
+
+  label {
+    font: {
+      size:   0.75em;
+      weight: 400;
+    }
+    text-align: left;
+  }
+
+  input, textarea {
+    font-size: 0.7em;
+    padding:   0.5em;
+    width:     100%;
+  }
+
+  #contact-form, #thank-you {
+    margin-bottom: 15px;
+    display: none;
+  }
+}
+
+#map {
+  height: 400px;
+  width:  100%;
+}

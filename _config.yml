@@ -1,0 +1,56 @@
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
+
+# Site settings
+# These are used to personalize your new site. If you look in the HTML files,
+# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
+# You can create any custom variable you would like, and they will be accessible
+# in the templates via {{ site.myvariable }}.
+
+title: Griffin Cigar
+# email: your-email@example.com
+# description: >- # this means to ignore newlines until "baseurl:"
+#   Griffin Cigar lounge brings the best of classic cigar culture in a luxury, relaxing, and sharp environment. Our selection caters to the savviest aficionado as well as the curious novice.
+description: >- # this means to ignore newlines until "baseurl:"
+  Griffin Cigar aims to inspire and provide a unique experience for memorable social gatherings, business meetings, or even personal reflection.
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "" # the base hostname & protocol for your site, e.g. http://example.com
+# twitter_username: jekyllrb
+# github_username:  jekyll
+permalink: /:title/
+
+# Build settings
+# markdown: kramdown
+# theme: minima
+# plugins:
+  # - jekyll-feed
+
+bootstrap:
+  assets: true
+
+# Default template settings
+title_separator: "-"
+
+defaults:
+  - scope:
+      path: "assets/images/cigars"
+    values:
+      cigarImage: true
+  - scope:
+      path: "assets/images/accessories"
+    values:
+      accessoryImage: true
+
+
+
+# Exclude from processing.
+# The following items will not be processed, by default. Create a custom list
+# to override the default setting.
+# exclude:
+#   - Gemfile
+#   - Gemfile.lock
+#   - node_modules
+#   - vendor/bundle/
+#   - vendor/cache/
+#   - vendor/gems/
+#   - vendor/ruby/

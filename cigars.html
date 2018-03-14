@@ -1,0 +1,31 @@
+---
+hero:
+  caption: "Below you'll find a list of cigar brands that we carry at Griffin"
+  headline: "CIGARS"
+layout: default
+permalink: /cigars
+---
+
+<div class="row main-body-container no-margin-bottom">
+  <div class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2">
+    <p class="main-body">Griffin Cigar lounge brings the best of classic cigar culture in a luxury, relaxing, and sharp environment. Our selection caters to the savviest aficionado as well as the curious novice.<br><br></p>
+  </div>
+</div>
+
+<div class="row main-body-container no-margin-top">
+  <div class="col-xs-12 col-sm-12 col-md-10 col-md-offset-1">
+    <div class="row row-eq-height align-item-center">
+    {% assign image_files = site.static_files | where: "cigarImage", true %}
+    {% for myimage in image_files %}
+      {% assign loopindex = forloop.index | modulo: 4 %}
+      <div class="col-xs-3">
+        <img src="{{ myimage.path | absolute_url }}" class="img-responsive">
+      </div>
+      {% if loopindex == 0 %}
+    </div><div class="row row-eq-height align-item-center">
+      {% endif %}
+
+    {% endfor %}
+    </div>
+  </div>
+</div>

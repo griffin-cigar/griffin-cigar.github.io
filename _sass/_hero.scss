@@ -1,0 +1,28 @@
+.hero {
+  background-color: #000;
+  color:            #FFF;
+  margin:           0;
+  padding:          0;
+  text-align:       center;
+
+  &.hero-image-lounge {
+    background: #000 url(/assets/images/lounge.jpg) center center;
+  }
+
+  &.hero-image-cigar {
+    background: #000 url(/assets/images/cigar.jpg) center center;
+  }
+
+  h1 {
+    font-size:      66px;
+    letter-spacing: 5px;
+    margin-top:     0;
+    padding-top:    165px;
+    // text-transform: uppercase;
+  }
+
+  .caption {
+    font-size:      22px;
+    padding-bottom: 188px;
+  }
+}

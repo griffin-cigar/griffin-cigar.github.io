@@ -1,0 +1,38 @@
+html {
+  min-height: 100%;
+  position:   relative;
+  overflow-x:    hidden;
+
+
+  body {
+    font-family: 'Source Sans Pro', 'Helvetica', 'Arial', sans-serif;
+    font-weight: 300;
+
+    .container-fluid {
+      &.main-container {
+        margin-bottom: 30px;
+        padding:       0;
+
+        .row, .hero {
+          // margin-left:  0;
+          margin-right: -7px;
+        }
+      }
+    }
+
+    .row-eq-height {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display:         flex;
+
+      &.align-item-center {
+        align-items: center;
+      }
+    }
+
+    .add-margin-top {
+      margin-top: 45px;
+    }
+  }
+}
