@@ -1,16 +1,18 @@
 .hero {
-  background-color: #000;
-  color:            #FFF;
-  margin:           0;
-  padding:          0;
-  text-align:       center;
-
-  &.hero-image-lounge {
-    background: #000 url(/assets/images/lounge.jpg) center center;
+  background: {
+    color:    #000;
+    position: center center;
+    size:     cover;
   }
+  color:      #FFF;
+  margin:     0;
+  padding:    0;
+  text-align: center;
 
-  &.hero-image-cigar {
-    background: #000 url(/assets/images/cigar.jpg) center center;
+  @each $page, $image in ('lounge', 'lounge.jpg'), ('cigars', 'cig-1.jpg'), ('accessories', 'acc.jpg'), ('events', 'events-1.jpg'), ('drinks', 'drinks-1.jpg'), ('contact', 'IMG_8002-1.jpg') {
+    &.hero-image-#{$page} {
+      background-image: url(/assets/images/#{$image});
+    }
   }
 
   h1 {
