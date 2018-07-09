@@ -33,6 +33,14 @@ title_separator: "-"
 
 defaults:
   - scope:
+      path: "assets/images/gallery"
+    values:
+      galleryImage: true
+  - scope:
+      path: "assets/images/first_cigar_klatch"
+    values:
+      firstCigarKlatchImage: true
+  - scope:
       path: "assets/images/cigars"
     values:
       cigarImage: true
