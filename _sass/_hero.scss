@@ -9,7 +9,7 @@
   padding:    0;
   text-align: center;
 
-  @each $page, $image in ('lounge', 'lounge.jpg'), ('cigars', 'cig-1.jpg'), ('accessories', 'acc.jpg'), ('events', 'events-1.jpg'), ('drinks', 'drinks-1.jpg'), ('contact', 'IMG_8002-1.jpg') {
+  @each $page, $image in ('lounge', 'lounge.jpg'), ('cigars', 'cig-1.jpg'), ('accessories', 'acc.jpg'), ('events', 'events-1.jpg'), ('drinks', 'drinks-1.jpg'), ('contact', 'IMG_8002-1.jpg'), ('photos', 'lounge.jpg') {
     &.hero-image-#{$page} {
       background-image: url(/assets/images/#{$image});
     }
