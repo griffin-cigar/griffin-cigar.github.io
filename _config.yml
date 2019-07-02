@@ -37,13 +37,13 @@ defaults:
     values:
       galleryImage: true
   - scope:
-      path: "assets/images/first_cigar_klatch"
-    values:
-      firstCigarKlatchImage: true
-  - scope:
       patch: "assets/images/second-cigar-klatch"
     values:
       secondCigarKlatchImage: true
+  - scope:
+      path: "assets/images/first_cigar_klatch"
+    values:
+      firstCigarKlatchImage: true
   - scope:
       path: "assets/images/cigars"
     values:
@@ -69,4 +69,4 @@ defaults:
 #   - vendor/bundle/
 #   - vendor/cache/
 #   - vendor/gems/
-#    - vendor/ruby/
+#   - vendor/ruby/
