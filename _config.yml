@@ -41,6 +41,10 @@ defaults:
     values:
       firstCigarKlatchImage: true
   - scope:
+      patch: "assets/images/second-cigar-klatch"
+    values:
+      secondCigarKlatchImage: true
+  - scope:
       path: "assets/images/cigars"
     values:
       cigarImage: true
