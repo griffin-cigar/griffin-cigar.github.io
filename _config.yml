@@ -37,7 +37,7 @@ defaults:
     values:
       galleryImage: true
   - scope:
-      patch: "assets/images/second-cigar-klatch"
+      path: "assets/images/second-cigar-klatch"
     values:
       secondCigarKlatchImage: true
   - scope:
