@@ -11,8 +11,8 @@ permalink: /photos
   <div class="col-xs-12 col-md-8 col-md-offset-2">
     <h2 class="text-center">Griffin Cigar</h2>
     <div class="row row-eq-height align-item-center">
-    {% assign image_files = site.static_files | where: "galleryImage", true %}
-    {% for myimage in image_files %}
+    {% assign gallery_images = site.static_files | where: "galleryImage", true %}
+    {% for myimage in gallery_images %}
       {% assign loopindex = forloop.index | modulo: 4 %}
       <div class="col-xs-3 text-center">
         <div class="gallery-thumbnail-container">
@@ -36,8 +36,8 @@ permalink: /photos
   <div class="col-xs-12 col-md-8 col-md-offset-2">
     <h2 class="text-center">Second Annual Cigar Klatch</h2>
     <div class="row row-eq-height align-item-center">
-    {% assign image_files = site.static_files | where: "secondCigarKlatchImage", true %}
-    {% for myimage in image_files %}
+    {% assign sck_images = site.static_files | where: "secondCigarKlatchImage", true %}
+    {% for myimage in sck_images %}
       {% assign loopindex = forloop.index | modulo: 4 %}
       <div class="col-xs-3 text-center">
         <div class="gallery-thumbnail-container">
@@ -61,8 +61,8 @@ permalink: /photos
   <div class="col-xs-12 col-md-8 col-md-offset-2">
     <h2 class="text-center">First Annual Cigar Klatch</h2>
     <div class="row row-eq-height align-item-center">
-    {% assign image_files = site.static_files | where: "firstCigarKlatchImage", true %}
-    {% for myimage in image_files %}
+    {% assign fck_images = site.static_files | where: "firstCigarKlatchImage", true %}
+    {% for myimage in fck_images %}
       {% assign loopindex = forloop.index | modulo: 4 %}
       <div class="col-xs-3 text-center">
         <div class="gallery-thumbnail-container">
